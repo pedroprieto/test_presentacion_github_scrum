@@ -1,0 +1,18 @@
+{
+  "name": "test",
+  "description": "Test app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.0",
+    "mocha": "^2.2.1",
+    "should": "^4.6.3"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "NODE_ENV=test mocha"
+  }
+}
