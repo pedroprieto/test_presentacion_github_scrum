@@ -1,5 +1,7 @@
 // Load the http module to create an http server.
 var http = require('http');
+var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var host = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
 // Configure our HTTP server to respond with Hello World to all requests.
 var server = http.createServer(function (request, response) {
@@ -8,7 +10,7 @@ var server = http.createServer(function (request, response) {
 });
 
 // Listen on port 8000, IP defaults to 127.0.0.1
-server.listen(8080);
+server.listen(port, host);
 
 // Put a friendly message on the terminal
-console.log("Server running at http://127.0.0.1:8000/");
+console.log("Server running");
