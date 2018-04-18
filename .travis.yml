@@ -5,7 +5,5 @@ deploy:
   provider: heroku
   api_key:
     secure: YLUuDxeZRIgbOz3SkzR97sayXW+Xt0zWs2vUjuZiMG4UhVATYEsJMdRbR8fCluHqu27TTTYGe4pQX9Mg9x2PMqAWVpL9Re/MGX/ZPWbOuk3okEJNItxurdqLOzsF0Zmg3eNt1AmAa7mt6qwN96OyiUGX0NlEKBrEK5maIPDTlNCt4KLSaSTYb8PUW6yVk/jLQmo9OL7Q00ED1+NJ/qK2yffi7rVDmvDn138BJO0vGzGKM3U/dkPHgy63IX+7b3BFkdjA+jM2Wooez4a4+SaKy6iPaZFR0+wCHbRjKXeHCalHdNexyYzw9IM/C84OU/Sxw+e3VwaE2fc0JvWaFub4X2R7/RHgV/mxXMrMbGp9w+ukkwrG3KeW/5FQQYBWudmjNSsReHcboe1DP5jKBWmZEGEUoYuPuwvUbZ4Bmya/J2Vig0IrNmUBC7aiVzPQm8ya7mwcBzvNkcupq2Xf5IimD8V21VxdNZv9vXDWzdwV6agmjqrpAdUWMUH9xTqxEeUnxAQnDOdeLrhjn3W2x23NQRZg5FK/0e3ry8logJVAhm4uPIijvxYNkCkaB8RiTPpxl0K+8rpsz8LbARod9m653kLKm7gB5EdM+KYOh0Kz3Iwfs/uGMdMsKIGldB/WF+u4JB/pWr0ja+skOez71WZ1mFG2d+v0h27eBuKAxfCg4GI=
-  app: test_presentacion_github_scrum
+  app: s4t1
   skip_cleanup: true
-  on:
-    repo: pedroprieto/test_presentacion_github_scrum
