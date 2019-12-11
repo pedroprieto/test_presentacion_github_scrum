@@ -5,5 +5,6 @@ deploy:
   provider: lambda
   function_name: "charlascrum"
   region: "eu-west-1"
+  role: "arn:aws:iam::764255565061:role/charlascrum-role-8u4wkff3"
   runtime: "nodejs12.x"
   handler_name: "handler"
