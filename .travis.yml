@@ -1,18 +1,9 @@
 language: node_js
 node_js:
-- '8.9.1'
+- '12'
 deploy:
-  - provider: heroku
-    api_key:
-      secure: dcB56Csm/fb2zDjeWb+5kqvVha180jb4YYiTMkaYXT6u3+s7q8on03vSejoyIl4cdEJqgYf2hOROt7odQtqzo1rwhTgDPtZw267HQJ59+HxwwFsvOaCQtZMqEsmDJwLSIx+OD9YK4g1seGai36E8tr64kh3E6Ri09BPZPoKaMSGgy1pHaDqtJwYUvQovclii0rhMaAH9+WqXfyn9GV/YJcNo9IZPYf7176yb9ZCECY+AjKa75OOQFLNjKVgaS+/Jy/Lmv7QCaMaWOQNU7Q++gJcHTUjWuCC/aIIN9IzX0fGqQMm6ohD9evIJcpiq+my/Igqw4lVwPTnIfuq95U9ddeEwv6foqF1W/OU7DQvbREzjqCFLdTXp4VIPnsAnmCHdYlINjXCb4dEeHgwdaRYKzPlqZ+U5NjyyvXCvVkDj/0s7R01XDJH6GHyVUS+wt5qQT69GMbgTn9z71K98qcvOa5uQ5QmlsGv/8fK0jjtlAtc7ctvG6uFRxf1f9jHTIPA0gTcFPh4qdvcvExtif+QKMdmozm0/afHX5t5fibenFfN8hB8PgQ6XnpS/ui2KQyCAoNlI+RyJfhHQHUvKJrIWEX/eCF1CYL8trCRda8jf9A1X1ilzpEv2vXOI7Q+6YfAI/S1YZ6odjSPHhE6HGaa7rjVe5cFtdTGT3AgG6/uo6Cs=
-    app: github-scrum-test
-    skip_cleanup: true
-  - provider: elasticbeanstalk
-    access_key_id: 
-      secure: SIEOAQ/X0k9yc+Dg/BKEj0yJaq37fWdv9CYTsSvsuDsE49lUubZx9tkJFrr85RRYQOs2n6qXmMhq+HHPEQCVPBew0eScfXi4fAMIVHR1Je+B3Ucnm2B4C4TEIXqASDr5JdcpuW3g1Qx3vMC4Vgtbj0q+FSRreQds9EO2rd926y3qmtkTIiLEWv5Q1g+EkaibfvqxEPu5Pla1qrHE8A2ZeoRece+K2VMHnIMRsmCyeVi5rBHqNmK7pubOnVvuwRCXwLSzbZOfrNJwBVSpRBKWu8RBagsAq8KY9qvluhSbOPQuGCYIQLvdIXAVwEH9cZceQAy+4dqk2QdaoXyRys5mjBAH+AEgk8Rsrn3mXSevOYrzzeDZXx2sfq88NAamLzfMqs7YWjX4dMfStR4neJuxwNobQrr/7bSAinDrw0Cu3q5aAbrECn7oazh3M3ZYbmw5Bg8aKc2HAkYWCHc7/ZMfDKkljvsQMXQMCNkb5RjcYUQXcnKzIh3PyQn53aiZ50+ypCMQrn+uo89oz7Wpujb1JSgr4h3QND1jZo319mBYXCsRyjJFwqEEMdUWO9EFSnKMJ9U1BY4ZMJxM9qkH1Zkzlbt3SOtN9BB0IofrvhEyUAGDVI+RNMa8geKi8of01SeMHQ9CNonCLOgHYHlkYPfLJi7o80ovp5GaKI2gyt45ptU=
-    secret_access_key:
-      secure: 2B30MCDUaHXR5tgNkJADLlw8uwMGCT3LZrm1Z4YIuUD0vrTvO+3NZVoSwRCJDEpRSypUbU/75BCVy3BLQpccb687XU7YyxgubKmG/oua+p5fIcU/GMeMDLF0/EYMvO5euSqpCo18VCvY6G4PcY+l61VoQ82JmWTwL7DlIhxADGnXL4MnW5y7rpiCQE+iIope8CuSLaUf0ekCR6i08qP8XuVxseWNdUFGmGURwXmaTNiu2mCSk1ATWXVLeSfor3PjK4/iAnb9P6n0hXyaKg5rk7+Rj62f/SAIjutqq/Fhf/UswXGy/fJyeWXLaQizBJrIxfnc+fjTw7HIIUJiAoM+j6BdvvNBHZ8nNrkpEWqiGSDTdeKaRDTaHMvn1aZDOUTK2wuzksdafLYHm61pM1R0Hl0uDzq4fbPTQNXHbVG5O7Vf8gmziwdy06wvkCtu/+jMe4XWVoKG4gB+LHjZJxSweG19OUgFlNGV4bHdBCjqRerqRpF/e6oZ7USCUzJWe+r/mYzCC5eeMOXkbcu29MjO/SpP/BCdZdwfebwpgLcB/y5EdRI0p9O/Wr/WnPG5fKECt/1SIzOlJu/9lwEeQ2cJDcKu+XmvOnaWE9P3sYVuCJaayxQEssLF7YUzDNIbVXPVIT15FKpO9iN0Jo0GyM0Rsf36C62HHAnfTMzjc6z2CCI=
-    region: "eu-west-1"
-    app: "testnode"
-    env: "Testnode-env"
-    bucket_name: "elasticbeanstalk-eu-west-1-764255565061"
+  provider: lambda
+  function_name: "charlascrum"
+  region: "eu-west-1"
+  runtime: "nodejs12.x"
+  handler_name: "handler"

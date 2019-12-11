@@ -1,16 +1,23 @@
-// Load the http module to create an http server.
-var http = require('http');
-var port = process.env.PORT || 8080;
-var host = '127.0.0.1';
+const express = require('express')
+const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
+const bodyParser = require('body-parser')
+const app = express()
+const router = express.Router()
+router.use(bodyParser.json())
 
-// Configure our HTTP server to respond with Hello World to all requests.
-var server = http.createServer(function (request, response) {
-  response.writeHead(200, {"Content-Type": "text/plain"});
-  response.end("Hello UA\n");
-});
+router.use(bodyParser.urlencoded({ extended: true }))
+router.use(awsServerlessExpressMiddleware.eventContext())
 
-// Listen on port 8000, IP defaults to 127.0.0.1
-server.listen(port);
 
-// Put a friendly message on the terminal
-console.log("Server running");
+
+router.get('/', (req, res) => {
+    res.send('hello Benidorm');
+})
+
+// The aws-serverless-express library creates a server and listens on a Unix
+// Domain Socket for you, so you can remove the usual call to app.listen.
+// app.listen(3000)
+app.use('/', router)
+
+// Export your express server so you can import it in the lambda function.
+module.exports = app
