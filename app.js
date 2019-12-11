@@ -17,6 +17,9 @@ router.get('/hola', (req, res) => {
     res.status(200).send({message: 'hello Benidorm'});
 })
 
+router.get('/charlascrum', (req, res) => {
+    res.status(200).send({message: 'hello Benidorm'});
+})
 // The aws-serverless-express library creates a server and listens on a Unix
 // Domain Socket for you, so you can remove the usual call to app.listen.
 // app.listen(3000)
