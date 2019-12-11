@@ -8,3 +8,4 @@ deploy:
   role: "arn:aws:iam::764255565061:role/service-role/charlascrum-role-8u4wkff3"
   runtime: "nodejs12.x"
   handler_name: "handler"
+  module_name: "handler"
