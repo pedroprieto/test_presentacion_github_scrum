@@ -10,7 +10,7 @@ router.use(awsServerlessExpressMiddleware.eventContext())
 
 
 router.get('/', (req, res) => {
-    res.send('hello Benidorm');
+    res.status(200).send({message: 'hello Benidorm'});
 })
 
 // The aws-serverless-express library creates a server and listens on a Unix
