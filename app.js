@@ -9,7 +9,6 @@ router.use(bodyParser.urlencoded({ extended: true }))
 router.use(awsServerlessExpressMiddleware.eventContext())
 
 
-
 router.get('/', (req, res) => {
     res.send('hello Benidorm');
 })
