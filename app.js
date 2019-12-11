@@ -10,7 +10,7 @@ router.use(awsServerlessExpressMiddleware.eventContext())
 
 
 router.get('/', (req, res) => {
-    res.status(200).send({message: 'hello Benidorm'});
+    res.status(400).send({message: 'hello Benidorm'});
 })
 
 router.get('/hola', (req, res) => {
