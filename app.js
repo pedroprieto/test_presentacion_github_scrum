@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/hola', (req, res) => {
-    res.status(200).send({message: 'hello Benidorm'});
+    res.status(400).send({message: 'hello Benidorm'});
 })
 
 router.get('/charlascrum', (req, res) => {
