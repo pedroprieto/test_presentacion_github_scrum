@@ -5,6 +5,7 @@ const app = express()
 const router = express.Router()
 
 app.set('view engine', 'pug')
+app.use('/css', express.static(__dirname + '/node_modules/bulma/css/'));
 
 router.use(bodyParser.json())
 
@@ -14,17 +15,10 @@ router.use(awsServerlessExpressMiddleware.eventContext())
 
 router.get('/', (req, res) => {
     res.render('index', {
-        apiUrl: req.query.data
+        data: req.query.data
     })
 })
 
-router.get('/hola', (req, res) => {
-    res.status(400).send({message: 'hello Benidorm'});
-})
-
-router.get('/charlascrum', (req, res) => {
-    res.status(200).send({message: 'hello Benidorm'});
-})
 // The aws-serverless-express library creates a server and listens on a Unix
 // Domain Socket for you, so you can remove the usual call to app.listen.
 // app.listen(3000)
