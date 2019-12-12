@@ -3,6 +3,9 @@ const awsServerlessExpressMiddleware = require('aws-serverless-express/middlewar
 const bodyParser = require('body-parser')
 const app = express()
 const router = express.Router()
+
+app.set('view engine', 'pug')
+
 router.use(bodyParser.json())
 
 router.use(bodyParser.urlencoded({ extended: true }))
@@ -10,7 +13,9 @@ router.use(awsServerlessExpressMiddleware.eventContext())
 
 
 router.get('/', (req, res) => {
-    res.status(400).send({message: 'hello Benidorm'});
+    res.render('index', {
+        apiUrl: req.apiGateway ? `https://${req.apiGateway.event.headers.Host}/${req.apiGateway.event.requestContext.stage}` : 'http://localhost:3000'
+    })
 })
 
 router.get('/hola', (req, res) => {
