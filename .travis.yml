@@ -9,3 +9,4 @@ deploy:
   runtime: "nodejs12.x"
   handler_name: "handler"
   module_name: "handler"
+  timeout: 30
