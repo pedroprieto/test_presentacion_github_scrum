@@ -7,10 +7,15 @@ html
     script(defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js")
   body
     section.hero.is-info.is-medium.is-bold
+      nav.navbar(role="navigation" aria-label="main navigation")
+        div.navbar-menu
+          div.navbar-end
+            a.navbar-item(href="/") Home
+            a.navbar-item(href="/adios") Despedida
       div.hero-body
         div.container.has-text-centered
-          h1.title Aplicación de ejemplo
-          p.subtitle Hola #{data}
+          h1.title #{title}
+          p.subtitle #{greeting} #{data}
           //- img.sam-logo(src='sam')
 
     section.section

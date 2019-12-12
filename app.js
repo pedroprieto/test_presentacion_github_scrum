@@ -15,6 +15,17 @@ router.use(awsServerlessExpressMiddleware.eventContext())
 
 router.get('/', (req, res) => {
     res.render('index', {
+        title: "Página de bienvenida",
+        greeting: "Hola",
+        data: req.query.data
+    })
+})
+
+
+router.get('/adios', (req, res) => {
+    res.render('index', {
+        title: "Página de despedida",
+        greeting: "Adiós",
         data: req.query.data
     })
 })
