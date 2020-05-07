@@ -15,7 +15,6 @@ router.use(awsServerlessExpressMiddleware.eventContext())
 
 router.get('/', (req, res) => {
     res.render('index', {
-        apiUrl: req.apiGateway ? `https://${req.apiGateway.event.headers.Host}/${req.apiGateway.event.requestContext.stage}` : 'http://localhost:3000',
         title: "Página de bienvenida",
         greeting: "Hola",
         data: req.query.data
@@ -24,7 +23,6 @@ router.get('/', (req, res) => {
 
 router.get('/adios', (req, res) => {
     res.render('index', {
-        apiUrl: req.apiGateway ? `https://${req.apiGateway.event.headers.Host}/${req.apiGateway.event.requestContext.stage}` : 'http://localhost:3000',
          title: "Página de despedida",
         greeting: "Adiós",
         data: req.query.data
