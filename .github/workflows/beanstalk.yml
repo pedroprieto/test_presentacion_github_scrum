@@ -43,3 +43,4 @@ jobs:
         # Version label for new Beanstalk version
         version_label: v1.1
         deployment_package: deploy.zip
+        use_existing_version_if_available: true
