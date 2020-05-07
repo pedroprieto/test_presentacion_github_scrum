@@ -26,7 +26,7 @@ jobs:
         npm install
         npm test
     - name: Generate deployment package
-      run: zip deploy.zip *.js *.json *.html *.css
+      run: zip -r deploy.zip * -x "**node_modules**"
     - name: Beanstalk Deploy
       uses: einaregilsson/beanstalk-deploy@v10
       with:
@@ -41,5 +41,5 @@ jobs:
         # Beanstalk environment name. If empty a version will be created but not deployed anywhere.
         environment_name: Testnodepedro-env
         # Version label for new Beanstalk version
-        version_label: v2.0
+        version_label: v3.0
         deployment_package: deploy.zip
