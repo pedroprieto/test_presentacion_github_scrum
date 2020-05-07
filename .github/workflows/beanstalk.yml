@@ -42,4 +42,5 @@ jobs:
         environment_name: Testnodepedro-env
         # Version label for new Beanstalk version
         version_label: app1
+        use_existing_version_if_available: true
         
