@@ -41,4 +41,5 @@ jobs:
         # Beanstalk environment name. If empty a version will be created but not deployed anywhere.
         environment_name: Testnodepedro-env
         # Version label for new Beanstalk version
-        version_label: v1.1
+        version_label: v2.0
+        deployment_package: deploy.zip
